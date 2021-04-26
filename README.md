@@ -1,6 +1,6 @@
 # Calculette V1.0
 
-[](calc.sh)
+Script :: [calc.sh](calc.sh)
 
 **known issue**
 * need to avoid division by 0
