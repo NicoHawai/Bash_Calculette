@@ -1,6 +1,6 @@
 #!/bin/bash
 
-re="^[0-9]+$"
+check_numb="^[0-9]+$"
 
 echo " "
 echo "================================"
@@ -12,7 +12,7 @@ echo " "
 while [ "$OUT" != "ok" ]; do
 
 	read -p "Put your first number : " first
-	if [[ "$first" =~ $re ]]
+	if [[ "$first" =~ $check_numb ]]
 	then
 		OUT="ok"
 	else
@@ -38,7 +38,7 @@ OUT=nok
 while [ "$OUT" != "ok" ]; do
 
 	read -p "Put your second number : " second
-	if [[ "$second" =~ $re ]]
+	if [[ "$second" =~ $check_numb ]]
 	then
 		OUT="ok"
 	else
