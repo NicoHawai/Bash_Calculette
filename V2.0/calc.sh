@@ -126,6 +126,8 @@ current_line=$lines
 		echo -n $bg_blue
 		tput cup $current_line $((position_plus+colonnes))
 		echo "+"
+		ligne_plus=$current_line
+		col_plus=$((position_plus+colonnes))
 		tput cup $current_line $((position_1+colonnes))
 		echo "1"
 		tput cup $current_line $((position_2+colonnes))
@@ -177,6 +179,8 @@ current_line=$lines
 		echo -n $bg_blue
 		tput cup $current_line $((position_moins+colonnes))
 		echo "-"
+		ligne_moins=$current_line
+		col_moins=$((position_moins+colonnes))
 		tput cup $current_line $((position_4+colonnes))
 		echo "4"
 		tput cup $current_line $((position_5+colonnes))
@@ -227,6 +231,8 @@ current_line=$lines
 		echo -n $bg_blue
 		tput cup $current_line $((position_fois+colonnes))
 		echo "x"
+		ligne_fois=$current_line
+		col_fois=$((position_fois+colonnes))
 		tput cup $current_line $((position_7+colonnes))
 		echo "7"
 		tput cup $current_line $((position_8+colonnes))
@@ -278,9 +284,13 @@ current_line=$lines
 		echo -n $bg_blue
 		tput cup $current_line $((position_div+colonnes))
 		echo "/"
+		ligne_div=$current_line
+		col_div=$((position_div+colonnes))
 		tput cup $current_line $((position_egual+colonnes))
 		tput bold
 		echo "="
+		ligne_eguale=$current_line
+		col_eguale=$((position_eguale+colonnes))
 		tput sgr0
 		echo -n $bg_blue
 		tput cup $current_line $((position_0+colonnes))
@@ -344,6 +354,32 @@ do
 					first_nbr=$nbr
 					OUT="ok"
 					operator=$touche
+					if [ "$operator" == "+" ]
+					then
+						tput cup $ligne_plus $col_plus
+						echo -n $(tput setab 1)
+						echo "+"
+						echo -n $bg_black
+					elif [ "$operator" == "-" ]
+					then
+						tput cup $ligne_moins $col_moins
+						echo -n $(tput setab 1)
+						echo "-"
+						echo -n $bg_black
+					elif [ "$operator" == "x" ]
+					then
+						tput cup $ligne_fois $col_fois
+						echo -n $(tput setab 1)
+						echo "x"
+						echo -n $bg_black
+					elif [ "$operator" == "/" ]
+					then
+						tput cup $ligne_div $col_div
+						echo -n $(tput setab 1)
+						echo "/"
+						echo -n $bg_black
+					else echo "Issue"
+					fi
 				fi
 			else
 				first_nbr=$nbr
@@ -365,6 +401,33 @@ do
 			else
 				OUT="ok"
 				operator=$touche
+				if [ "$operator" == "+" ]
+				then
+					tput cup $ligne_plus $col_plus
+					echo -n $(tput setab 1)
+					echo "+"
+					echo -n $bg_black
+				elif [ "$operator" == "-" ]
+				then
+					tput cup $ligne_moins $col_moins
+					echo -n $(tput setab 1)
+					echo "-"
+					echo -n $bg_black
+				elif [ "$operator" == "x" ]
+				then
+					tput cup $ligne_fois $col_fois
+					echo -n $(tput setab 1)
+					echo "x"
+					echo -n $bg_black
+				elif [ "$operator" == "/" ]
+				then
+					tput cup $ligne_div $col_div
+					echo -n $(tput setab 1)
+					echo "/"
+					echo -n $bg_black
+				else echo "Issue"
+				fi
+
 			fi
 		done
 	OUT="nok"
