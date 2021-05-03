@@ -75,7 +75,8 @@ current_line=$lines
 		printf '%*s' "$colonnes"
 		echo -n $bg_blue
 		printf '%*s' "$largeur_calc"
-		echo -n $bg_black
+		#echo -n $bg_black
+		tput sgr0
 		printf '%*s' "$colonnes"
 	done
 #DISPLAY
@@ -86,11 +87,13 @@ current_line=$lines
 		printf '%*s' "$colonnes"
 		echo -n $bg_blue
 		printf '%*s' $((2*taille_touche_L))
-		echo -n $bg_black
+		#echo -n $bg_black
+		tput sgr0
 		printf '%*s' "$largeur_display"
 		echo -n $bg_blue
 		printf '%*s' $((2*taille_touche_L))
-		echo -n $bg_black
+		#echo -n $bg_black
+		tput sgr0
 		printf '%*s' "$colonnes"
 	done
 # Dessous display
@@ -100,7 +103,8 @@ current_line=$lines
 		printf '%*s' "$colonnes" 
 		echo -n $bg_blue
 		printf '%*s' "$largeur_calc"
-		echo -n $bg_black
+		#echo -n $bg_black
+		tput sgr0
 		printf '%*s' "$colonnes"
 	done
 
@@ -115,13 +119,15 @@ current_line=$lines
 		printf '%*s' "$colonnes"
 		echo -n $bg_blue
 		printf '%*s' "$largeur_calc"
-		echo -n $bg_black
+		#echo -n $bg_black
+		tput sgr0
 		printf '%*s' "$colonnes"
 	done
 		printf '%*s' "$colonnes"
 		echo -n $bg_blue
 		printf '%*s' "$largeur_calc"
-		echo -n $bg_black
+		#echo -n $bg_black
+		tput sgr0
 		printf '%*s' "$colonnes"
 		echo -n $bg_blue
 		tput cup $current_line $((position_plus+colonnes))
@@ -139,22 +145,26 @@ current_line=$lines
 	for((j=0;j<line_dessous;j++))
 	do
 		((current_line=current_line+1))
-		echo -n $bg_black
+		#echo -n $bg_black
+		tput sgr0
 		printf '%*s' "$colonnes"
 		echo -n $bg_blue
 		printf '%*s' "$largeur_calc"
-		echo -n $bg_black
+		#echo -n $bg_black
+		tput sgr0
 		printf '%*s' "$colonnes"
 	done
 #ligne separation
 	for((j=0;j<taille_touche_H;j++))
 	do
 		((current_line=current_line+1))
-		echo -n $bg_black
+		#echo -n $bg_black
+		tput sgr0
 		printf '%*s' "$colonnes" 
 		echo -n $bg_blue
 		printf '%*s' "$largeur_calc"
-		echo -n $bg_black
+		#echo -n $bg_black
+		tput sgr0
 		printf '%*s' "$colonnes"
 	done
 # - 4 5 6
@@ -168,13 +178,15 @@ current_line=$lines
 		printf '%*s' "$colonnes"
 		echo -n $bg_blue
 		printf '%*s' "$largeur_calc"
-		echo -n $bg_black
+		#echo -n $bg_black
+		tput sgr0
 		printf '%*s' "$colonnes"
 	done
 		printf '%*s' "$colonnes"
 		echo -n $bg_blue
 		printf '%*s' "$largeur_calc"
-		echo -n $bg_black
+		#echo -n $bg_black
+		tput sgr0
 		printf '%*s' "$colonnes"
 		echo -n $bg_blue
 		tput cup $current_line $((position_moins+colonnes))
@@ -191,22 +203,26 @@ current_line=$lines
 	for((j=0;j<line_dessous;j++))
 	do
 		((current_line=current_line+1))
-		echo -n $bg_black
+		#echo -n $bg_black
+		tput sgr0
 		printf '%*s' "$colonnes"
 		echo -n $bg_blue
 		printf '%*s' "$largeur_calc"
-		echo -n $bg_black
+		#echo -n $bg_black
+		tput sgr0
 		printf '%*s' "$colonnes"
 	done
 #ligne separation
 	for((j=0;j<taille_touche_H;j++))
 	do
 		((current_line=current_line+1))
-		echo -n $bg_black
+		#echo -n $bg_black
+		tput sgr0
 		printf '%*s' "$colonnes" 
 		echo -n $bg_blue
 		printf '%*s' "$largeur_calc"
-		echo -n $bg_black
+		#echo -n $bg_black
+		tput sgr0
 		printf '%*s' "$colonnes"
 	done
 # x 7 8 9
@@ -220,13 +236,15 @@ current_line=$lines
 		printf '%*s' "$colonnes"
 		echo -n $bg_blue
 		printf '%*s' "$largeur_calc"
-		echo -n $bg_black
+		#echo -n $bg_black
+		tput sgr0
 		printf '%*s' "$colonnes"
 	done
 		printf '%*s' "$colonnes"
 		echo -n $bg_blue
 		printf '%*s' "$largeur_calc"
-		echo -n $bg_black
+		#echo -n $bg_black
+		tput sgr0
 		printf '%*s' "$colonnes"
 		echo -n $bg_blue
 		tput cup $current_line $((position_fois+colonnes))
@@ -243,22 +261,26 @@ current_line=$lines
 	for((j=0;j<line_dessous;j++))
 	do
 		((current_line=current_line+1))
-		echo -n $bg_black
+		#echo -n $bg_black
+		tput sgr0
 		printf '%*s' "$colonnes"
 		echo -n $bg_blue
 		printf '%*s' "$largeur_calc"
-		echo -n $bg_black
+		#echo -n $bg_black
+		tput sgr0
 		printf '%*s' "$colonnes"
 	done
 #ligne separation
 	for((j=0;j<taille_touche_H;j++))
 	do
 		((current_line=current_line+1))
-		echo -n $bg_black
+		#echo -n $bg_black
+		tput sgr0
 		printf '%*s' "$colonnes" 
 		echo -n $bg_blue
 		printf '%*s' "$largeur_calc"
-		echo -n $bg_black
+		#echo -n $bg_black
+		tput sgr0
 		printf '%*s' "$colonnes"
 	done
 
@@ -273,13 +295,13 @@ current_line=$lines
 		printf '%*s' "$colonnes"
 		echo -n $bg_blue
 		printf '%*s' "$largeur_calc"
-		echo -n $bg_black
+		tput sgr0 #echo -n $bg_black
 		printf '%*s' "$colonnes"
 	done
 		printf '%*s' "$colonnes"
 		echo -n $bg_blue
 		printf '%*s' "$largeur_calc"
-		echo -n $bg_black
+		tput sgr0 #echo -n $bg_black
 		printf '%*s' "$colonnes"
 		echo -n $bg_blue
 		tput cup $current_line $((position_div+colonnes))
@@ -298,11 +320,11 @@ current_line=$lines
 	for((j=0;j<line_dessous;j++))
 	do
 		((current_line=current_line+1))
-		echo -n $bg_black
+		tput sgr0 #echo -n $bg_black
 		printf '%*s' "$colonnes"
 		echo -n $bg_blue
 		printf '%*s' "$largeur_calc"
-		echo -n $bg_black
+		tput sgr0 #echo -n $bg_black
 		printf '%*s' "$colonnes"
 	done
 
@@ -311,11 +333,11 @@ current_line=$lines
 	do
 #CADRE BAS
 		((current_line=current_line+1))
-		echo -n $bg_black
+		tput sgr0 #echo -n $bg_black
 		printf '%*s' "$colonnes"
 		echo -n $bg_blue
 		printf '%*s' "$largeur_calc"
-		echo -n $bg_black
+		tput sgr0 #echo -n $bg_black
 		printf '%*s' "$colonnes"
 	done
 
@@ -359,25 +381,25 @@ do
 						tput cup $ligne_plus $col_plus
 						echo -n $(tput setab 1)
 						echo "+"
-						echo -n $bg_black
+						tput sgr0 #echo -n $bg_black
 					elif [ "$operator" == "-" ]
 					then
 						tput cup $ligne_moins $col_moins
 						echo -n $(tput setab 1)
 						echo "-"
-						echo -n $bg_black
+						tput sgr0 #echo -n $bg_black
 					elif [ "$operator" == "x" ]
 					then
 						tput cup $ligne_fois $col_fois
 						echo -n $(tput setab 1)
 						echo "x"
-						echo -n $bg_black
+						tput sgr0 #echo -n $bg_black
 					elif [ "$operator" == "/" ]
 					then
 						tput cup $ligne_div $col_div
 						echo -n $(tput setab 1)
 						echo "/"
-						echo -n $bg_black
+						tput sgr0 #echo -n $bg_black
 					else echo "Issue"
 					fi
 				fi
@@ -406,25 +428,25 @@ do
 					tput cup $ligne_plus $col_plus
 					echo -n $(tput setab 1)
 					echo "+"
-					echo -n $bg_black
+					tput sgr0 #echo -n $bg_black
 				elif [ "$operator" == "-" ]
 				then
 					tput cup $ligne_moins $col_moins
 					echo -n $(tput setab 1)
 					echo "-"
-					echo -n $bg_black
+					tput sgr0 #echo -n $bg_black
 				elif [ "$operator" == "x" ]
 				then
 					tput cup $ligne_fois $col_fois
 					echo -n $(tput setab 1)
 					echo "x"
-					echo -n $bg_black
+					tput sgr0 #echo -n $bg_black
 				elif [ "$operator" == "/" ]
 				then
 					tput cup $ligne_div $col_div
 					echo -n $(tput setab 1)
 					echo "/"
-					echo -n $bg_black
+					tput sgr0 #echo -n $bg_black
 				else echo "Issue"
 				fi
 
@@ -440,11 +462,11 @@ do
 		printf '%*s' "$colonnes"
 		echo -n $bg_blue
 		printf '%*s' $((2*taille_touche_L))
-		echo -n $bg_black
+		tput sgr0 #echo -n $bg_black
 		printf '%*s' "$largeur_display"
 		echo -n $bg_blue
 		printf '%*s' $((2*taille_touche_L))
-		echo -n $bg_black
+		tput sgr0 #echo -n $bg_black
 		printf '%*s' "$colonnes"
 		((pos_nbr=position_display_col-1))
 		#echo $LINENO
@@ -474,16 +496,16 @@ do
 	fi
 #RESULT
 	#DISPLAY
-	echo -n $bg_black
+	tput sgr0 #echo -n $bg_black
 	tput cup $position_display_line 0
 	printf '%*s' "$colonnes"
 	echo -n $bg_blue
 	printf '%*s' $((2*taille_touche_L))
-	echo -n $bg_black
+	tput sgr0 #echo -n $bg_black
 	printf '%*s' "$largeur_display"
 	echo -n $bg_blue
 	printf '%*s' $((2*taille_touche_L))
-	echo -n $bg_black
+	tput sgr0 #echo -n $bg_black
 	printf '%*s' "$colonnes"
 	((pos_nbr=position_display_col-1))
 	OUT="ok"
