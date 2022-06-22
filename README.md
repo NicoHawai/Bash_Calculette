@@ -1,4 +1,4 @@
-# Calculette
+# Calculette en bash
 
 V1 = CLI  
 V2 = TUI
